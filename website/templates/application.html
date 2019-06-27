@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      {% load static %}
+    <link href="{% static 'materialize/css/materialize.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
+    <title>Psite</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Pacifico|Poppins:400,700" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  </head>
+  <body >
+    <div class="navbar-fixed">
+        <nav >
+            <div class = "nav-wrapper red lighten 5">
+              <a href="{% url 'index' %}" class="brand-logo"><img id ="logo"src="{%static '/images/logo3.png' %}"></a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down specfont">
+                <li><a href="{% url 'index' %}">Acceuil</a></li>
+                <li><a href="{% url 'blog:index' %}">Blog</a></li>
+                <li><a>Mes Applications</a></li>
+                <li><a>A propos</a></li>
+                <li><a href="{% url 'contact' %}">Me Contactez</a></li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+      <ul class="sidenav" id="mobile-demo">
+          <li><a href="{% url 'index' %}">Acceuil</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Mes Applications</a></li>
+            <li><a>A propos</a></li>
+            <li><a href="{% url 'contact' %}">Me Contactez</a></li>
+      </ul>
+      <br>
+      <br>
+      <div class="content">
+        {% block content %} {% endblock %}
+      </div>
+    <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js'%}"></script>
+    <script>
+       M.AutoInit()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+{% extends 'application.html' %}
+{% load static %}
+{% block content %}
+<div class = "container">
+        <div class="row">
+          <div class="col s12">
+            <p class="specfont">
+              Bonjour, Je m'appelle Hermann. Un jeune Ingénieur et Hardcore Learner.
+            </p>
+            <p id="citation"><a href="">A propos de ce site</a></p>
+          </div>
+        </div>
+        <div class="row z-depth-2 specborder">
+          <div class="col s12 l4 ">
+            <div class="row">
+              <div class="col s12">
+                <div id="profil-picture">
+                </div>
+                <div class="row">
+                  <div  class ="offset-l1 col l12 layout">
+                    <img id="rs-logo" class="responsive-img center" src="{%static '/images/linkedin.png' %}">
+                    <img id="rs-logo" class="responsive-img  center" src="{%static '/images/github.png' %}">
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  id ="frame-pres"class="offset-s2 offset-m1 offset-l1 col s9 m12 l7">
+            <div class="row">
+              <div class=" offset-m2 col m12 l12">
+                  <h5>Herman Soulton-Agboton</h5>
+                  <p>Alternant Ingénieur Méthodes</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class=" offset-m2 col s5 m4 l4">
+                  <a class="waves-effect green btn">TELECHARGER CV</a>
+              </div>
+              <div class=" offset-s1 col s6 m5 l3">
+                  <a class="waves-effect light-blue btn">CONTACT</a>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class=" offset-m2 col s3 l3">
+                <span>Age</span>
+              </div>
+              <div class="offset-s3 offset-m1 offset-l1 col s3 l3">
+                <span>23</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class=" offset-m2  col s3 l3">
+                <span>Email</span>
+              </div>
+              <div class=" offset-s3 offset-m1 offset-l1 col s6 l7">
+                <span>Hermann.soulton-agboton@hotmail.com</span>
+              </div>
+            </div>
+            <div class="row">
+                <div class=" offset-m2 col s3 l3">
+                  <span>Téléphone</span>
+                </div>
+                <div class="offset-s3 offset-m1 offset-l1  col s6 l7">
+                  <span>+33 07 81 26 95 46</span>
+                </div>
+            </div>
+            <br>
+          </div>
+        </div>
+
+        <h4>Formation Académique</h4>
+        <br>
+        <br>
+        {% for formation in Formations %}
+        <div class= "row">
+          <div class=" center col s4 l2">
+            <img  class="responsive-img" src="{{ formation.photo.url }}">
+          </div>
+          <div class = " offset-l1 col s8 l9 z-depth-2 specborder red ligthen 5 white-text">
+            <h3 class="flow-text">{{ formation.school}}</h3>
+            <ul>
+              <li><p>{{ formation.start_date }} - {{formation.name}}</p></li>
+              <li><p>{{ formation.status }}</p></li>
+            </ul>
+          </div>
+        </div>
+        {% endfor %} 
+        <h4>Expériences professionnelles</h4>
+  </div>
+{% endblock %}

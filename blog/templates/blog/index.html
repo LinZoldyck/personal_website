@@ -1,0 +1,34 @@
+{% extends 'application.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+        <div class ="row">
+                <div class=" col l7">
+                        <div class="row">
+                            <div class=" col l4">
+                                <i style=" color:red" class="material-icons small">calendar_today </i> 
+                            </div>
+                            <span style="margin-left:-120px;font-weight:500">05 Septembre 2018</span>
+                        </div>
+                        <div class="card">
+                                <div class="card-image">
+                                  <img src="{% static '/images/default.jpg' %}">
+                                </div>
+                                <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                                <div class="card-content">
+                                  <h4>Title</h4>
+                                  <p>Summury of the blog post</p>
+                                </div>
+                                <div class="card-action">
+                                  <a href="#">Lire</a>
+                                </div>
+                        </div>
+                </div>
+                <div class="col l4 offset-l1 z-depth-1">
+                    <h4>Articles Récents</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam sapiente dolores nisi nesciunt exercitationem? Iusto voluptatem odio totam ullam! Accusamus saepe recusandae velit quos eveniet, reiciendis a sunt perferendis tempora!</p>
+                </div>
+        </div>  
+</div>
+
+{% endblock %}

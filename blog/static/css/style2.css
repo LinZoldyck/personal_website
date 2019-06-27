@@ -1,0 +1,15 @@
+.specborder{
+   border-radius: 0.25em
+}
+.specfont{
+   font-size: 2em;
+   font-weight: bold;
+   text-align: center;
+   
+}
+#citation{
+   text-align: center;
+   font-style: italic;
+   font-weight: lighter;
+   
+}
