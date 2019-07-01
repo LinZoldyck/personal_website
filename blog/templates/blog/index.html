@@ -2,33 +2,86 @@
 {% load static %}
 {% block content %}
 <div class="container">
-        <div class ="row">
+        <div class="row">
                 <div class=" col l7">
                         <div class="row">
-                            <div class=" col l4">
-                                <i style=" color:red" class="material-icons small">calendar_today </i> 
-                            </div>
-                            <span style="margin-left:-120px;font-weight:500">05 Septembre 2018</span>
+                                <div class=" center col l1">
+                                        <i class=" blog-icon-color material-icons small">calendar_today </i>
+                                </div>
+                                <div class=" center col l3">
+                                        <span class="blog-date">05 Septembre 2018</span>
+                                </div>
                         </div>
                         <div class="card">
                                 <div class="card-image">
-                                  <img src="{% static '/images/default.jpg' %}">
+                                        <img src="{% static '/images/default.jpg' %}">
                                 </div>
-                                <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                                <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i
+                                                class="material-icons">edit</i></a>
                                 <div class="card-content">
-                                  <h4>Title</h4>
-                                  <p>Summury of the blog post</p>
+                                        <h4>Title</h4>
+                                        <p>Summury of the blog post</p>
                                 </div>
                                 <div class="card-action">
-                                  <a href="#">Lire</a>
+                                        <a href="#">Lire</a>
+                                </div>
+
+                        </div>
+                        <br>
+                        <br>
+                </div>
+                <div id="view-port-mobile-visibility">
+                        <div class="col l4 offset-l1 z-depth-1">
+                                <div class="row ">
+                                        <div class="col l12 red ligthen 5 white-text">
+                                                <h4>Articles Recents</h4>
+                                        </div>
+                                </div>
+                                <div class=" row">
+                                        <div class="col l12">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+                                                        sapiente
+                                                        dolores nisi
+                                                        nesciunt exercitationem? Iusto voluptatem odio totam ullam!
+                                                        Accusamus
+                                                        saepe recusandae
+                                                        velit quos eveniet, reiciendis a sunt perferendis tempora!</p>
+                                        </div>
                                 </div>
                         </div>
                 </div>
-                <div class="col l4 offset-l1 z-depth-1">
-                    <h4>Articles Récents</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam sapiente dolores nisi nesciunt exercitationem? Iusto voluptatem odio totam ullam! Accusamus saepe recusandae velit quos eveniet, reiciendis a sunt perferendis tempora!</p>
-                </div>
-        </div>  
-</div>
 
+        </div>
+        <div id="view-port-desktop-visibility">
+                <div class="row">
+                        <div class="col s12">
+                                <h5><span class="red-text">A</span>rticle Recents</h5>
+
+                        </div>
+                        <div class="col s12 z-depth-1">
+                                <p>LoreIn sint quis pariatur sint fugiat veniam id aliqua aliqua ipsum mollit
+                                        consectetur Lorem consequat. Duis ipsum fugiat sit non est duis nisi
+                                        reprehenderit adipisicing ipsum duis. Velit adipisicing quis culpa qui eiusmod
+                                        aliqua eiusmod consequat do do laboris esse. Consectetur do occaecat sit est
+                                        amet id cupidatat occaecat qui velit nulla. Quis enim duis aliqua minim ad anim
+                                        qui aute voluptate ex occaecat tempor ex. Reprehenderit voluptate non eu fugiat.
+                                        Exercitation fugiat consequat do fugiat eu.</p>
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col s12">
+                                <h5><span class="red-text">A</span>rticle Populaire</h5>
+                        </div>
+                        <div class="col s12 z-depth-1">
+                                <p>LoreIn sint quis pariatur sint fugiat veniam id aliqua aliqua ipsum mollit
+                                        consectetur Lorem consequat. Duis ipsum fugiat sit non est duis nisi
+                                        reprehenderit adipisicing ipsum duis. Velit adipisicing quis culpa qui eiusmod
+                                        aliqua eiusmod consequat do do laboris esse. Consectetur do occaecat sit est
+                                        amet id cupidatat occaecat qui velit nulla. Quis enim duis aliqua minim ad anim
+                                        qui aute voluptate ex occaecat tempor ex. Reprehenderit voluptate non eu fugiat.
+                                        Exercitation fugiat consequat do fugiat eu.</p>
+                        </div>
+                </div>
+        </div>
+</div>
 {% endblock %}

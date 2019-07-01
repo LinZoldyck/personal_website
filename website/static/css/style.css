@@ -45,9 +45,9 @@
    width:13%;
 }
 #school-logo{
-  margin-top:-25px;
-   width:50px;
-   height:50px;
+  width:80%;
+  margin-top:5%;
+  margin-left:15%;
 }
 #rs-logo{
    width:10%;
@@ -61,10 +61,30 @@
    flex-direction: row;
    justify-content: center;
 }
+.blog-icon-color{
+   color:red;
+   margin-top:-5px;
+   }
+.blog-date {
+  
+   font-weight:500;
+   padding-top:500px;
+}
+
+
 @media only screen and (max-width: 600px){
    #logo{
       width:27%;
       margin-left: 85px;
+   }
+   #school-logo{
+      margin-top:25%;
+      margin-left:15%;
+   }
+   
+   #view-port-mobile-visibility{
+      display: none;
+      
    }
 }
 
@@ -87,4 +107,11 @@
       left:-3%
    }
   
+}
+
+@media only screen and (min-width: 992px){
+   #view-port-desktop-visibility{
+      display: none;
+      
+   }
 }

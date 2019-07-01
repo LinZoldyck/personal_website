@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      {% load static %}
-    <link href="{% static 'materialize/css/materialize.min.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
-    <title>Psite</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Pacifico|Poppins:400,700" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-  </head>
-  <body >
-    <div class="navbar-fixed">
-        <nav >
-            <div class = "nav-wrapper red lighten 5">
-              <a href="{% url 'index' %}" class="brand-logo"><img id ="logo"src="{%static '/images/logo3.png' %}"></a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down specfont">
-                <li><a href="{% url 'index' %}">Acceuil</a></li>
-                <li><a href="{% url 'blog:index' %}">Blog</a></li>
-                <li><a>Mes Applications</a></li>
-                <li><a>A propos</a></li>
-                <li><a href="{% url 'contact' %}">Me Contactez</a></li>
-              </ul>
-            </div>
-          </nav>
-    </div>
-      <ul class="sidenav" id="mobile-demo">
+
+<head>
+  {% load static %}
+  <link href="{% static 'materialize/css/materialize.min.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
+  <title>Psite</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Pacifico|Poppins:400,700" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper red lighten 5">
+        <a href="{% url 'index' %}" class="brand-logo"><img id="logo" src="{%static '/images/logo3.png' %}"></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down specfont">
           <li><a href="{% url 'index' %}">Acceuil</a></li>
-            <li><a>Blog</a></li>
-            <li><a>Mes Applications</a></li>
-            <li><a>A propos</a></li>
-            <li><a href="{% url 'contact' %}">Me Contactez</a></li>
-      </ul>
-      <br>
-      <br>
-      <div class="content">
-        {% block content %} {% endblock %}
+          <li><a href="{% url 'blog:index' %}">Blog</a></li>
+          <li><a>Mes Applications</a></li>
+          <li><a href="{% url 'about' %}">A propos</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
       </div>
-    <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js'%}"></script>
-    <script>
-       M.AutoInit()
-    </script>
-  </body>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="{% url 'index' %}">Acceuil</a></li>
+    <li><a href="{% url 'blog:index' %}">Blog</a></li>
+    <li><a>Mes Applications</a></li>
+    <li><a href="{% url 'about' %}">A propos</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+  </ul>
+  <br>
+  <br>
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>
+  <footer class="page-footer red lighten 5">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text flow-text">Reseaux Sociaux</h5>
+          <div class="row">
+            <div class="col s1">
+              <a href="" id="rs-logo"><img class="responsive-img center"
+                  src="{%static '/images/linkedin-black.png' %}"></a>
+            </div>
+            <div class="col s1">
+              <a href="" id="rs-logo"><img class="responsive-img center" src="{%static '/images/github.png' %}"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="{% url 'blog:index' %}">Blog</a></li>
+            <li><a class="grey-text text-lighten-3" href="{% url 'contact' %}">Contact</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">A propos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2019 Design by H.Soulton
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="{% static 'materialize/js/materialize.min.js'%}"></script>
+  <script>
+    M.AutoInit()
+  </script>
+</body>
+
 </html>
