@@ -3,55 +3,64 @@
 {% block content %}
 <div class="container">
         <div class="row">
-                <div class=" col l7">
+                <div class="col l1">
+                        <div class="fixed-action-btn">
+                                <a  href=" {% url 'blog:article_new' %}"class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">add</i></a>
+                        </div>  
+                </div>
+                <div class=" col l6">
+                        {% for article in Articles %}
                         <div class="row">
                                 <div class=" center col l1">
                                         <i class=" blog-icon-color material-icons small">calendar_today </i>
                                 </div>
-                                <div class=" center col l3">
-                                        <span class="blog-date">05 Septembre 2018</span>
+                                <div class=" center col l4">
+                                        <span class="blog-date">{{ article.pub_dat }}</span>
                                 </div>
                         </div>
                         <div class="card">
                                 <div class="card-image">
                                         <img src="{% static '/images/default.jpg' %}">
                                 </div>
-                                <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i
+                                <a href="{% url 'blog:article_update' article.id %}"class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i
                                                 class="material-icons">edit</i></a>
                                 <div class="card-content">
-                                        <h4>Title</h4>
-                                        <p>Summury of the blog post</p>
+                                        <h5>{{ article.title }}</h5>
+                                        <p>{{ article.summary }}</p>
                                 </div>
                                 <div class="card-action">
-                                        <a href="#">Lire</a>
+                                        <a  class ="btn-small waves-effect waves-light blue "href="{% url 'blog:article_view' article.id %}">Lire</a>
                                 </div>
-
                         </div>
                         <br>
                         <br>
+                        {%endfor %}
                 </div>
+               
                 <div id="view-port-mobile-visibility">
-                        <div class="col l4 offset-l1 z-depth-1">
-                                <div class="row ">
-                                        <div class="col l12 red ligthen 5 white-text">
-                                                <h4>Articles Recents</h4>
+                                <div class="col l4 offset-l1 z-depth-1">
+                                        <div class="row ">
+                                                <div class="col l12 red ligthen 5 white-text">
+                                                        <h5>Articles Recents</h5>
+                                                </div>
+                                        </div>
+                                        <div class=" row">
+                                                <div class="col l12">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+                                                                sapiente
+                                                                dolores nisi
+                                                                nesciunt exercitationem? Iusto voluptatem odio totam ullam!
+                                                                Accusamus
+                                                                saepe recusandae
+                                                                velit quos eveniet, reiciendis a sunt perferendis tempora!</p>
+                                                </div>
                                         </div>
                                 </div>
-                                <div class=" row">
-                                        <div class="col l12">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
-                                                        sapiente
-                                                        dolores nisi
-                                                        nesciunt exercitationem? Iusto voluptatem odio totam ullam!
-                                                        Accusamus
-                                                        saepe recusandae
-                                                        velit quos eveniet, reiciendis a sunt perferendis tempora!</p>
-                                        </div>
-                                </div>
-                        </div>
                 </div>
+               
 
         </div>
+        
         <div id="view-port-desktop-visibility">
                 <div class="row">
                         <div class="col s12">
@@ -83,5 +92,6 @@
                         </div>
                 </div>
         </div>
+        
 </div>
 {% endblock %}

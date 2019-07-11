@@ -1,4 +1,6 @@
 
+ 
+     
 .specfont{
    font-size: 2em;
    font-weight: bold;
@@ -66,9 +68,9 @@
    margin-top:-5px;
    }
 .blog-date {
-  
-   font-weight:500;
+   font-weight:600;
    padding-top:500px;
+   font-size: 16px;
 }
 
 

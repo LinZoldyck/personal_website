@@ -16,6 +16,14 @@ class Article(models.Model):
     summary = models.CharField( max_length = 300)
     published = models.BooleanField(default = True)
 
+class Commentary(models.Model):
+    article = models.ForeignKey(Article, on_delete = models.CASCADE)
+    author =  models.CharField(max_length=500)
+    content = models.TextField()
+    pub_date = models.DateField(auto_now = True)
+    published = models.BooleanField(default = True)
+
+
 
 
 

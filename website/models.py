@@ -14,3 +14,13 @@ class Formation(models.Model):
         return '%s %s' % (self.name, self.school)
 
 
+class Experience(models.Model):
+    title = models.CharField(max_length=500)
+    company_name = models.CharField(max_length=500)
+    start_date = models.DecimalField("Début expérience", max_digits = 6, decimal_places = 0)
+    end_date = models.DecimalField("Fin expérience", max_digits = 6, decimal_places = 0)
+    photo = models.ImageField(upload_to="images/")
+
+    def __str__(self):
+        return   '%s %s' % (self.title, self.company_name)
+        

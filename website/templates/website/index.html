@@ -93,5 +93,27 @@
   </div>
   {% endfor %}
   <h4>Experience professionnelle </h4>
+  <br>
+  <br>
+  {% for experience in Experiences %}
+  <div class="row">
+    <div class="center col s4 l2">
+      <img id="school-logo" class="responsive-img" src="{{ experience.photo.url }}">
+    </div>
+    <div class=" offset-l1 col s8 l9 z-depth-2 specborder red ligthen 5 white-text">
+        <h3 class="flow-text">{{ experience.title}}</h3>
+        <ul>
+          <li>
+            <p>{{ experience.start_date }} - {{experience.company_name}}</p>
+          </li>
+          <li>
+            <p></p>
+          </li>
+        </ul>
+      </div>
+  </div>
+  {% endfor %}
 </div>
+<br>
+<br>
 {% endblock %}
